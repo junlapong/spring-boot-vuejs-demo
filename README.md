@@ -22,7 +22,7 @@ yarn build
 ./mvnw test
 
 # build
-./mvnw clean package -Dtest.skip
+./mvnw clean package -Dmaven.test.skip
 ```
 
 ## Notes
