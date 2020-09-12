@@ -31,6 +31,7 @@ yarn build
 - [Ignore modified (but not committed) files in git?](https://stackoverflow.com/questions/655243/ignore-modified-but-not-committed-files-in-git)
 - [Vue CRUD #6 ต่อ API ด้วย Axios](https://medium.com/@sariz.wachirasook/vue-crud-6-api-5b5baf523332)
 
+
 ```
 git update-index --assume-unchanged src/main/resources/static/index.html
 ```
