@@ -19,17 +19,8 @@ jobs:
       with:
         node-version: 12.x
     
-    - run: cd web && yarn install
-    - name: Cache yarn install
-      uses: actions/cache@v2
-      with:
-        path: |
-          node_modules
-          */*/node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-
     - name: Build project with yarn
-      run: yarn build && cd -
+      run: cd web && yarn install && yarn build && cd -
     
     - uses: actions/setup-java@v1
       with:
