@@ -19,11 +19,16 @@ jobs:
       with:
         node-version: 12.x
     
-    #- name: Cache yarn install
-    #  uses: c-hive/gha-yarn-cache@v1
+    - name: Cache the node dependencies
+      uses: actions/cache@v2
+      working-directory: web
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
     - name: Build project with yarn
-      run: cd web && yarn install && yarn build && cd -
+      run: yarn install && yarn build
+      working-directory: web
     
     - uses: actions/setup-java@v1
       with:
