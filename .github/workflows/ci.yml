@@ -19,8 +19,8 @@ jobs:
       with:
         node-version: 12.x
     
-    - name: Cache yarn install
-      uses: c-hive/gha-yarn-cache@v1
+    #- name: Cache yarn install
+    #  uses: c-hive/gha-yarn-cache@v1
 
     - name: Build project with yarn
       run: cd web && yarn install && yarn build && cd -
