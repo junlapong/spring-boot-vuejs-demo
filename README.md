@@ -32,6 +32,8 @@ yarn build
 - [Vue CRUD #6 ต่อ API ด้วย Axios](https://medium.com/@sariz.wachirasook/vue-crud-6-api-5b5baf523332)
 - [CI/CD for Java Maven using GitHub Actions](https://medium.com/@alexander.volminger/ci-cd-for-java-maven-using-github-actions-d009a7cb4b8f)
 - [How to cache node_modules in GitHub Actions with Yarn](https://dev.to/mpocock1/how-to-cache-nodemodules-in-github-actions-with-yarn-24eh)
+- [How to Manually Trigger a GitHub Actions Workflow](https://levelup.gitconnected.com/how-to-manually-trigger-a-github-actions-workflow-4712542f1960)
+
 
 ```
 git update-index --assume-unchanged src/main/resources/static/index.html
