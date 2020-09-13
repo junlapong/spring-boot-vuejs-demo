@@ -30,7 +30,7 @@ yarn build
 - [How to run SPA webapp on Spring Boot 2.x](https://dev.to/composite/how-to-run-spa-webapp-with-spring-boot-2-x-5gdo)
 - [Ignore modified (but not committed) files in git?](https://stackoverflow.com/questions/655243/ignore-modified-but-not-committed-files-in-git)
 - [Vue CRUD #6 ต่อ API ด้วย Axios](https://medium.com/@sariz.wachirasook/vue-crud-6-api-5b5baf523332)
-
+- [CI/CD for Java Maven using GitHub Actions](https://medium.com/@alexander.volminger/ci-cd-for-java-maven-using-github-actions-d009a7cb4b8f)
 
 ```
 git update-index --assume-unchanged src/main/resources/static/index.html
