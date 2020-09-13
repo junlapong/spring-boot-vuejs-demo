@@ -3,10 +3,11 @@
 
 name: Build
 
-on: [workflow_dispatch]
-#on:
-#  push:
-#    branches: [ master ]
+#on: [workflow_dispatch]
+
+on:
+  push:
+    branches: [ master ]
 
 jobs:
   build:
@@ -35,7 +36,7 @@ jobs:
         java-version: 11
 
     - name: Cache the Maven packages to speed up build
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
