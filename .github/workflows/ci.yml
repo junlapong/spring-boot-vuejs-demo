@@ -21,7 +21,12 @@ jobs:
     
     - run: cd web && yarn install
     - name: Cache yarn install
-      uses: c-hive/gha-yarn-cache@v1
+      uses: actions/cache@v2
+      with:
+        path: |
+          node_modules
+          */*/node_modules
+        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
     - name: Build project with yarn
       run: yarn build && cd -
