@@ -14,15 +14,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    #- uses: c-hive/gha-yarn-cache@v1
-      
+  
     - uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - run: cd web && yarn install && yarn build && cd -
+    
+    - uses: c-hive/gha-yarn-cache@v1
+
+    - name: Build project with yarn
+      run: cd web && yarn install && yarn build && cd -
     
     - uses: actions/setup-java@v1
       with:
         java-version: 11
+
+    - name: Cache the Maven packages to speed up build
+      uses: actions/cache@v1
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2   
+
     - name: Build project with Maven
       run: mvn -B package
